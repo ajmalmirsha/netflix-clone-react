@@ -4,8 +4,10 @@
     height: 30px;
     padding: 20px;
     display: flex;
+    justify-content: space-between;
     padding: 20px;
     background-color: #111;
+
 }
 .logo{
     position: fixed;
@@ -18,3 +20,88 @@
     right: 20px;
     width: 35px;
 }
+.heads{
+    position: fixed;
+    color: azure;
+    line-height: 1.3;
+}
+
+.heads:hover{
+    color: gold;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    margin-left: 120px;
+
+}
+
+.nav-list li {
+    margin-right: 30px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.nav-list a {
+    margin-right: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li:hover{
+    color: goldenrod;
+}
+
+
+
+.nav-list a:hover{
+    color: goldenrod;
+}
+
+/* .search{
+    margin-right: 250px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+} */
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 250px;
+    width: 300px;
+  }
+  
+  .search-box input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .search-box button[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .search-box i {
+    color: #555;
+    font-size: 20px;
+  }
+
+  

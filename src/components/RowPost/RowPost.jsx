@@ -25,25 +25,26 @@ console.log(movies);
       autoplay:1
     }
   }
-  function moviePlay(id){
-   console.log('id :',id);
+  function moviePlay(id,{show}){
+   console.log('id :',id,show);
    axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response)=>{
     console.log(response);
-    if(response.data.results.length !== 0){
+    if(response.data.results.length !== 0 && show == true ){
+
       setMovieid(response.data.results[0])
     
     }else{
       setMovieid('')
  
     }
-   })
+   }) 
   }
 return (
   <div className='row'>
     <h2>{props.title}</h2>
     <div className="posters">
       {movies.map((x) => (
-        <img onClick={()=>moviePlay(x.id)} className={props.isSmall? 'smallPoster' :'poster'} src={`${imageUrl+x.backdrop_path}`} alt="" />
+        <img onDoubleClick={()=>moviePlay(x.id,{show:false})} onClick={()=>moviePlay(x.id,{show:true})} className={props.isSmall? 'smallPoster' :'poster'} src={`${imageUrl+x.backdrop_path}`} alt="" />
       ))}
     </div>
     {
